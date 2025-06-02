@@ -1,0 +1,12 @@
+# python_app/Dockerfile
+
+FROM python:3.9-slim-buster
+
+WORKDIR /app
+
+COPY app.py .
+
+# CAMBIO AQUÍ: Mantén el contenedor "vivo" esperando
+CMD ["tail", "-f", "/dev/null"] 
+# O puedes usar: CMD ["sleep", "infinity"] 
+# O: CMD ["bash"] # Si necesitas una shell en el contenedor para hacer cosas.

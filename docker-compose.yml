@@ -1,0 +1,20 @@
+# docker-compose.yml (sin la línea de versión)
+
+services:
+  python_app_container:
+    build: ./python_app
+    container_name: mi_python_app
+    networks:
+      - mi_red_simple
+
+  nginx_server_container:
+    build: ./nginx_server
+    container_name: mi_nginx_server
+    ports:
+      - "80:80"
+    networks:
+      - mi_red_simple
+
+networks:
+  mi_red_simple:
+    driver: bridge
