@@ -1,3 +1,4 @@
+#BATISTA BOVIO TPI AYSO
 # python_app/app.py
 
 def calcular_promedio(numeros):
@@ -8,17 +9,16 @@ def calcular_promedio(numeros):
 if __name__ == "__main__":
     print("¡Calculadora de Promedios!")
     print("Ingresa números separados por comas para calcular su promedio.")
-    print("Para salir, escribe 'fin' o 'salir'.") # ¡Nueva instrucción!
+    print("Para salir, escribe 'fin' o 'salir'.") 
 
     while True:
         entrada = input("Números: ")
 
-        # --- CAMBIO AQUÍ: Verificar si el usuario quiere salir ---
+        # Agregamos esta parte 
         if entrada.lower() in ('fin', 'salir'): # Convertimos a minúsculas para aceptar 'FIN', 'Salir', etc.
             print("¡Gracias por usar la calculadora! Saliendo...")
             break # Rompe el bucle while y termina el programa
-        # --- FIN DEL CAMBIO ---
-
+        
         try:
             lista_numeros = [float(n.strip()) for n in entrada.split(',')]
             promedio = calcular_promedio(lista_numeros)
