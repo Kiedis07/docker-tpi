@@ -4,5 +4,5 @@
 FROM nginx:alpine
 
 # Copiamos nuestro archivo HTML al directorio donde Nginx busca los archivos estáticos
-# Si no creaste index.html, esta línea solo copiará una carpeta vacía, pero Nginx seguirá funcionando con su página por defecto.
+
 COPY index.html /usr/share/nginx/html/

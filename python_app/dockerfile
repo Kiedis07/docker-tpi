@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY app.py .
 
-# CAMBIO AQUÍ: Mantén el contenedor "vivo" esperando
+# Mantiene el contenedor "vivo" esperando
 CMD ["tail", "-f", "/dev/null"] 
-# O puedes usar: CMD ["sleep", "infinity"] 
-# O: CMD ["bash"] # Si necesitas una shell en el contenedor para hacer cosas.
+# Podemos usar: CMD ["sleep", "infinity"] 
+# O: CMD ["bash"] # Si necesitamos una shell en el contenedor para hacer cosas.
